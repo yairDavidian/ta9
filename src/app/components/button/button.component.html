@@ -1,0 +1,15 @@
+<button
+  class="button"
+  matSuffix
+  mat-flat-button
+  [ngStyle]="{
+    '--color': buttonProps().color ?? '#1469C0'
+  }"
+  [type]="buttonProps().type"
+  (click)="handleClick.emit()"
+>
+  @if(buttonProps().icon){
+  <mat-icon class="icon">{{ buttonProps().icon }}</mat-icon>
+  }
+  {{ buttonProps().title }}
+</button>

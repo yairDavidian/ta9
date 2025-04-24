@@ -1,0 +1,84 @@
+<form
+  class="form d-flex flex-column justify-content-between"
+  (submit)="onSubmit()"
+>
+  <div>
+    <div class="d-flex justify-content-between pb-5">
+      <div class="title">{{ itemId() ? "Update item" : "Create New" }}</div>
+      <mat-icon class="icon" (click)="closeForm.emit(false)" fontIcon="close">
+      </mat-icon>
+    </div>
+    <div class="d-flex flex-column gap-5">
+      <div class="d-flex gap-2">
+        <div class="d-flex flex-column gap-1">
+          <div class="d-flex gap-1 header">
+            <label>Name</label>
+          </div>
+          <mat-form-field
+            class="example-form-field"
+            appearance="outline"
+            class="w-100"
+            [ngStyle]="{
+              '--height': '40px',
+            }"
+          >
+            <input
+              name="name"
+              matInput
+              type="text"
+              [(ngModel)]="valueName"
+              placeholder="Type tag name..."
+            />
+          </mat-form-field>
+        </div>
+        <div class="w-100">
+          <div class="d-flex gap-1 pb-1">
+            <label>Color</label>
+          </div>
+          <input
+            name="color"
+            class="color-picker"
+            [(colorPicker)]="colorPicker"
+            [style.background]="colorPicker"
+          />
+        </div>
+      </div>
+      <div class="w-100 d-flex flex-column gap-1">
+        <div class="d-flex gap-1 header">
+          <label>Tag Description</label>
+        </div>
+        <mat-form-field
+          class="example-form-field"
+          appearance="outline"
+          class="w-100"
+          [ngStyle]="{
+            '--height': '100%'
+          }"
+        >
+          <textarea
+            name="description"
+            matInput
+            type="text"
+            [(ngModel)]="valueDesc"
+            rows="5"
+            placeholder="Type tag description..."
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-evenly pt-3">
+    <app-button
+      [buttonProps]="{ title: 'CANCEL' }"
+      (handleClick)="closeForm.emit(false)"
+    ></app-button>
+    <app-button
+      [buttonProps]="{
+        title: 'SAVE',
+        icon: 'save',
+        type: 'submit',
+        color: '#2BAE6D'
+      }"
+    ></app-button>
+  </div>
+</form>

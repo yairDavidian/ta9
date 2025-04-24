@@ -1,0 +1,109 @@
+[
+  {
+    "id": "1",
+    "name": "Complete project presentation",
+    "description": "Finalize slides and rehearse the presentation for the upcoming stakeholder meeting.",
+    "createDate": "2023-10-01T09:00:00Z",
+    "lastUpdate": "2023-10-05T14:30:00Z",
+    "createdBy": "john",
+    "color": "#FF6B6B"
+  },
+  {
+    "id": "2",
+    "name": "Review code changes",
+    "description": "Go through the latest pull requests and provide feedback on code quality and logic.",
+    "createDate": "2023-10-02T10:15:00Z",
+    "lastUpdate": "2023-10-03T16:45:00Z",
+    "createdBy": "sarah",
+    "color": "#4ECDC4"
+  },
+  {
+    "id": "3",
+    "name": "Update documentation",
+    "description": "Add missing sections and update API references in the project documentation.",
+    "createDate": "2023-10-03T11:30:00Z",
+    "lastUpdate": "2023-10-04T09:20:00Z",
+    "createdBy": "mike",
+    "color": "#45B7D1"
+  },
+  {
+    "id": "4",
+    "name": "Fix critical bugs",
+    "description": "Resolve high-priority issues affecting core functionalities in production.",
+    "createDate": "2023-10-04T13:00:00Z",
+    "lastUpdate": "2023-10-05T17:10:00Z",
+    "createdBy": "lisa",
+    "color": "#FFBE0B"
+  },
+  {
+    "id": "5",
+    "name": "Prepare for client meeting",
+    "description": "Organize meeting agenda, compile notes, and create an executive summary for the client.",
+    "createDate": "2023-10-05T08:45:00Z",
+    "lastUpdate": "2023-10-06T10:30:00Z",
+    "createdBy": "david",
+    "color": "#8338EC"
+  },
+  {
+    "id": "6",
+    "name": "Implement new feature",
+    "description": "Develop and integrate the new dashboard analytics feature into the application.",
+    "createDate": "2023-10-06T09:30:00Z",
+    "lastUpdate": "2023-10-07T15:45:00Z",
+    "createdBy": "emma",
+    "color": "#3A86FF"
+  },
+  {
+    "id": "7",
+    "name": "Test application updates",
+    "description": "Perform regression and functional testing on the recent build before deployment.",
+    "createDate": "2023-10-07T10:00:00Z",
+    "lastUpdate": "2023-10-08T11:20:00Z",
+    "createdBy": "alex",
+    "color": "#06D6A0"
+  },  
+  {
+    "id": "8",
+    "name": "Conduct user training",
+    "description": "Prepare training materials and conduct a session for end-users on the new features.",
+    "createDate": "2023-10-08T12:00:00Z",
+    "lastUpdate": "2023-10-09T14:00:00Z",
+    "createdBy": "sophia",
+    "color": "#FF9F00"
+  },
+  {
+    "id": "9",
+    "name": "Plan next sprint",
+    "description": "Review backlog items and prioritize tasks for the upcoming sprint planning meeting.",
+    "createDate": "2023-10-09T13:30:00Z",
+    "lastUpdate": "2023-10-10T16:15:00Z",
+    "createdBy": "james",
+    "color": "#FF6F61"
+  },
+  {
+    "id": "10",
+    "name": "Conduct performance reviews",
+    "description": "Evaluate team members' performance and provide constructive feedback.",
+    "createDate": "2023-10-10T14:45:00Z",
+    "lastUpdate": "2023-10-11T18:30:00Z",
+    "createdBy": "olivia",
+    "color": "#FF2E63"
+  },
+  {"id": "11",
+    "name": "Optimize database queries",
+    "description": "Analyze and improve the performance of slow-running database queries.",
+    "createDate": "2023-10-11T15:00:00Z",
+    "lastUpdate": "2023-10-12T19:00:00Z",
+    "createdBy": "noah",
+    "color": "#F9C74F"
+  },
+  {
+    "id": "12",
+    "name": "Design new UI mockups",
+    "description": "Create high-fidelity mockups for the new user interface based on client feedback.",
+    "createDate": "2023-10-12T16:30:00Z",
+    "lastUpdate": "2023-10-13T20:15:00Z",
+    "createdBy": "ava",
+    "color": "#90BE6D"
+  }
+]

@@ -1,0 +1,16 @@
+.container-todo-list {
+  .title {
+    color: #44778f;
+    font-weight: 500;
+  }
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); // bright black
+    z-index: 998;
+    pointer-events: all;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="d-flex gap-4 container-tiles flex-wrap">
+  @for(item of store.filteredItems(); track item;let itemIndex = $index){
+  <div
+    class="d-flex flex-column container-tile"
+    (dblclick)="item.id && handleUpdate.emit(item.id)"
+  >
+    <div class="delete-icon">
+      <mat-icon
+        fontIcon="delete"
+        (click)="item.id && removeItem(item.id)"
+      ></mat-icon>
+    </div>
+    <div
+      class="color-img align-self-center my-4"
+      [ngStyle]="{ '--bgColor': item.color }"
+    ></div>
+    <div class="title">{{ item.name }}</div>
+  </div>
+  }
+</div>

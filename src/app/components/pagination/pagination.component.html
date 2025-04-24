@@ -1,0 +1,27 @@
+<div class="pagination d-flex justify-content-center w-100 py-4 gap-5">
+  <div class="d-flex align-self-center gap-2">
+    <span class="align-self-center">Items per page:</span>
+    <mat-form-field appearance="outline" class="d-flex align-self-center">
+      <mat-select [(ngModel)]="selectedValue" name="page">
+        @for (page of pages; track page) {
+        <mat-option [value]="page">{{ page }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="d-flex align-self-center align-items-center gap-2">
+    <mat-icon
+      (click)="store.setCurrentPage(currentPage() - 1)"
+      fontIcon="chevron_left"
+      [class.disabled-icon]="currentPage() === 1"
+      class="icon"
+    ></mat-icon>
+    <span class="px-3 current-page"> {{ currentPage() }} </span>
+    <mat-icon
+      fontIcon="chevron_right"
+      class="icon"
+      [class.disabled-icon]="filteredItems().length < pageSize()"
+      (click)="store.setCurrentPage(currentPage() + 1)"
+    ></mat-icon>
+  </div>
+</div>

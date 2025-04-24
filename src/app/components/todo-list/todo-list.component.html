@@ -1,0 +1,46 @@
+<table class="table-wrapper">
+  <tr class="table-row">
+    @for(column of configColumns; track $index){
+    <th>
+      <span>{{ column.text }} </span>
+    </th>
+    }
+  </tr>
+  @for(item of store.filteredItems(); track item;let itemIndex = $index){
+  <tr class="table-row" (dblclick)="item.id && handleClick(item.id)">
+    @for(column of configColumns; track $index){
+    <td>
+      @switch (column.type) { @case (columnTypeEnum.Date) {
+      <div class="text-wrapper">
+        <span>
+          {{ item[column.path] | date : "dd/MM/yyyy" }}
+        </span>
+      </div>
+      } @case (columnTypeEnum.Text) {
+      <div class="text-wrapper">
+        <div class="text-truncate">
+          {{ item[column.path] }}
+        </div>
+      </div>
+      }@case (columnTypeEnum.Color) {
+      <div
+        class="text-wrapper color-box"
+        [ngStyle]="{ 'background-color': item[column.path] }"
+      ></div>
+      } @case (columnTypeEnum.Actions) {
+      <div class="text-wrapper d-flex gap-5">
+        <mat-icon
+          fontIcon="delete"
+          (click)="item.id && removeItem(item.id)"
+        ></mat-icon>
+        <mat-icon
+          fontIcon="edit"
+          (click)="item.id && handleClick(item.id)"
+        ></mat-icon>
+      </div>
+      } }
+    </td>
+    }
+  </tr>
+  }
+</table>

@@ -1,0 +1,44 @@
+.container-tiles {
+  .container-tile {
+    width: 200px;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    margin: 0 0 20px 0;
+    display: flex;
+    .color-img {
+      width: 80px;
+      height: 80px;
+      background-color: var(--bgColor) !important;
+      border-radius: 4px;
+    }
+    .title {
+      padding: 10px 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background-color: #f6f6f6;
+    }
+  }
+  .delete-icon {
+    position: relative;
+    mat-icon {
+      position: absolute;
+      background-color: #daecf3;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+      top: -10px;
+      left: -12px;
+      cursor: pointer;
+      color: #000000;
+    }
+    &:hover {
+      color: #d32f2f;
+    }
+  }
+}
