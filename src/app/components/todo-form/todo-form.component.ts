@@ -13,7 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { TodosStore } from '../../store/data.store';
 import { Todo } from '../../model/todo.model';
-import { ButtonComponent } from '../button/button.component';
+import { ButtonComponent } from '../base-components/button/button.component';
 
 @Component({
   selector: 'app-todo-form',

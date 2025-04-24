@@ -4,7 +4,7 @@ import {
   input,
   output,
 } from '@angular/core';
-import { ButtonProps } from '../../interfaces/button.interface';
+import { ButtonProps } from '../../../interfaces/button.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';

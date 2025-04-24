@@ -11,7 +11,7 @@ import { TodoListComponent } from '../todo-list/todo-list.component';
 import { CommonModule } from '@angular/common';
 import { TodosStore } from '../../store/data.store';
 import { MatIconButton } from '@angular/material/button';
-import { ButtonComponent } from '../button/button.component';
+import { ButtonComponent } from '../base-components/button/button.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { TodoFormComponent } from '../todo-form/todo-form.component';
 import { PaginationComponent } from '../pagination/pagination.component';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { SnackBarComponent } from '../snack-bar/snack-bar.component';
+import { SnackBarComponent } from '../base-components/snack-bar/snack-bar.component';
 const DURATION = 5;
 @Component({
   selector: 'app-dashboard',
