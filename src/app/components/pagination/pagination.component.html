@@ -20,7 +20,7 @@
     <mat-icon
       fontIcon="chevron_right"
       class="icon"
-      [class.disabled-icon]="filteredItems().length < pageSize()"
+      [class.disabled-icon]="currentPage() === store.maxPage()"
       (click)="store.setCurrentPage(currentPage() + 1)"
     ></mat-icon>
   </div>

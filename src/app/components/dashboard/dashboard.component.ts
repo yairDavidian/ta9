@@ -68,6 +68,8 @@ export class DashboardComponent implements OnInit {
   }
   openSnackBar() {
     this._snackBar.openFromComponent(SnackBarComponent, {
+      horizontalPosition: 'start',
+      verticalPosition: 'bottom',
       duration: DURATION * 1000,
       data: {
         message: 'Todo deleted successfully',

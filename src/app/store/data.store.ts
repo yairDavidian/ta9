@@ -30,19 +30,23 @@ export const TodosStore = signalStore(
   withState<DataState>(initialState),
 
   // 2. Define computed properties that reactively update
-  withComputed(({ todos, filter, pageSize, currentPage }) => ({
-    // Returns the filtered and paginated list of todos
-    filteredItems: computed(() => {
-      const todosFilter = todos().filter(
+  withComputed(({ todos, filter, pageSize, currentPage }) => {
+    const filtered = computed(() =>
+      todos().filter(
         (item) =>
           item.name.toLowerCase().includes(filter().toLowerCase()) ||
           item.description.toLowerCase().includes(filter().toLowerCase())
-      );
+      )
+    );
 
-      const start = (currentPage() - 1) * pageSize();
-      return todosFilter.slice(start, start + pageSize());
-    }),
-  })),
+    return {
+      filteredItems: computed(() => {
+        const start = (currentPage() - 1) * pageSize();
+        return filtered().slice(start, start + pageSize());
+      }),
+      maxPage: computed(() => Math.ceil(filtered().length / pageSize())),
+    };
+  }),
 
   // 3. Define all the methods to interact with and modify the store
   withMethods((store, dataService = inject(DataService)) => ({

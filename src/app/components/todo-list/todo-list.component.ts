@@ -10,10 +10,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { getColumns } from '../../configs/columns.config';
 import { columnTypeEnum } from '../../enums/table.enum';
 import { TodosStore } from '../../store/data.store';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-todo-list',
-  imports: [CommonModule, MatIconModule, FormsModule],
+  imports: [CommonModule, MatIconModule, FormsModule, MatTooltipModule],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,5 +1,6 @@
 .container-todo-list {
   .title {
+    font-size: 24px;
     color: #44778f;
     font-weight: 500;
   }
@@ -12,5 +13,13 @@
     background-color: rgba(0, 0, 0, 0.5); // bright black
     z-index: 998;
     pointer-events: all;
+  }
+  .mat-mdc-form-field {
+    background-color: white !important;
+  }
+  ::ng-deep {
+    .mat-mdc-form-field-subscript-wrapper {
+      display: none !important;
+    }
   }
 }

@@ -11,7 +11,6 @@ import {
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { ColorPickerDirective } from 'ngx-color-picker';
 import { TodosStore } from '../../store/data.store';
 import { Todo } from '../../model/todo.model';
 import { ButtonComponent } from '../button/button.component';
@@ -23,7 +22,6 @@ import { ButtonComponent } from '../button/button.component';
     MatInputModule,
     FormsModule,
     CommonModule,
-    ColorPickerDirective,
     ButtonComponent,
   ],
   templateUrl: './todo-form.component.html',

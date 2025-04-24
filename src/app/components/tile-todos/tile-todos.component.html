@@ -2,12 +2,12 @@
   @for(item of store.filteredItems(); track item;let itemIndex = $index){
   <div
     class="d-flex flex-column container-tile"
-    (dblclick)="item.id && handleUpdate.emit(item.id)"
+    (click)="item.id && handleUpdate.emit(item.id)"
   >
     <div class="delete-icon">
       <mat-icon
         fontIcon="delete"
-        (click)="item.id && removeItem(item.id)"
+        (click)="item.id && removeItem(item.id); $event.stopPropagation()"
       ></mat-icon>
     </div>
     <div

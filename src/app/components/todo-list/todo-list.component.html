@@ -7,7 +7,7 @@
     }
   </tr>
   @for(item of store.filteredItems(); track item;let itemIndex = $index){
-  <tr class="table-row" (dblclick)="item.id && handleClick(item.id)">
+  <tr class="table-row" (click)="item.id && handleClick(item.id)">
     @for(column of configColumns; track $index){
     <td>
       @switch (column.type) { @case (columnTypeEnum.Date) {
@@ -18,24 +18,26 @@
       </div>
       } @case (columnTypeEnum.Text) {
       <div class="text-wrapper">
-        <div class="text-truncate">
+        <div class="text-truncate" [matTooltip]="item[column.path]">
           {{ item[column.path] }}
         </div>
       </div>
       }@case (columnTypeEnum.Color) {
-      <div
-        class="text-wrapper color-box"
-        [ngStyle]="{ 'background-color': item[column.path] }"
-      ></div>
+      <div class="text-wrapper d-flex">
+        <div
+          class="d-flex color-box"
+          [ngStyle]="{ 'background-color': item[column.path] }"
+        ></div>
+      </div>
       } @case (columnTypeEnum.Actions) {
       <div class="text-wrapper d-flex gap-5">
         <mat-icon
           fontIcon="delete"
-          (click)="item.id && removeItem(item.id)"
+          (click)="item.id && removeItem(item.id); $event.stopPropagation()"
         ></mat-icon>
         <mat-icon
           fontIcon="edit"
-          (click)="item.id && handleClick(item.id)"
+          (click)="item.id && handleClick(item.id); $event.stopPropagation()"
         ></mat-icon>
       </div>
       } }

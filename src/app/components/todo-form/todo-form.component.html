@@ -36,10 +36,10 @@
             <label>Color</label>
           </div>
           <input
+            type="color"
+            [(ngModel)]="colorPicker"
             name="color"
             class="color-picker"
-            [(colorPicker)]="colorPicker"
-            [style.background]="colorPicker"
           />
         </div>
       </div>
