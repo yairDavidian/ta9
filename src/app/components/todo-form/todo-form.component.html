@@ -37,6 +37,7 @@
           </div>
           <input
             type="color"
+            [defaultValue]="colorPicker"
             [(ngModel)]="colorPicker"
             name="color"
             class="color-picker"
@@ -69,7 +70,7 @@
   </div>
   <div class="d-flex justify-content-evenly pt-3">
     <app-button
-      [buttonProps]="{ title: 'CANCEL' }"
+      [buttonProps]="{ title: 'CANCEL', type: 'button' }"
       (handleClick)="closeForm.emit(false)"
     ></app-button>
     <app-button

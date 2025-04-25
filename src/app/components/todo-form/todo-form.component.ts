@@ -47,7 +47,7 @@ export class TodoFormComponent implements OnInit {
   valueName = signal<string>(''); // Holds the name input value
   valueDesc = signal<string>(''); // Holds the description input value
   createDate = signal<Date>(new Date()); // Tracks creation date
-  colorPicker = ''; // Bound to the color picker UI
+  colorPicker = '#FFFFFF'; // Bound to the color picker UI
   closeForm = output<boolean>();
   itemId = input<string>('');
 

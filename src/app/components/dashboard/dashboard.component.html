@@ -11,7 +11,11 @@
         ></mat-button-toggle>
       </mat-button-toggle-group>
       <app-button
-        [buttonProps]="{ title: 'Add todo', icon: 'add_circle' }"
+        [buttonProps]="{
+          title: 'Add todo',
+          icon: 'add_circle',
+          type: 'button'
+        }"
         (handleClick)="openTodoForm.set(true)"
       ></app-button>
     </div>
@@ -57,10 +61,11 @@
     (handleUpdate)="handleUpdate($event)"
     (handleDelete)="openSnackBar()"
   ></app-tile-todos>
-  } @if(openTodoForm()){
-  <div class="backdrop"></div>
-  <app-todo-form [itemId]="itemId()" (closeForm)="closeForm()"></app-todo-form>
   }
   <app-pagination></app-pagination>
   }
 </div>
+@if(openTodoForm()){
+<div class="backdrop"></div>
+<app-todo-form [itemId]="itemId()" (closeForm)="closeForm()"></app-todo-form>
+}

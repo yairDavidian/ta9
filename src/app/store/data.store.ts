@@ -81,7 +81,7 @@ export const TodosStore = signalStore(
       patchState(store, { todos });
 
       // If deleting an item results in an empty page, move back a page
-      if (store.filteredItems().length === 0) {
+      if (store.todos().length && store.filteredItems().length === 0) {
         patchState(store, {
           currentPage: store.currentPage() - 1,
         });
