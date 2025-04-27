@@ -88,20 +88,6 @@ export const TodosStore = signalStore(
       }
     },
 
-    // (Unused) Filters todos and immediately patches the todos list with matching items
-    // This overrides the original todos, which may be unintended
-    filterItems(value: string) {
-      const filter = value.toLowerCase();
-      const todos = store
-        .todos()
-        .filter(
-          (item) =>
-            item.name.toLowerCase().includes(filter) ||
-            item.description.toLowerCase().includes(filter)
-        );
-      patchState(store, { todos });
-    },
-
     // Sets the filter value and optionally resets to page 1
     setFilter(filter: string, page: number = 1) {
       patchState(store, { filter });
